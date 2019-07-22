@@ -37,7 +37,7 @@ class laptopAll(Spider):
 		data = pd.DataFrame()
 		rows = response.xpath("//div[contains(@class, 'item-container')]/div")
 
-		for selector in rows[0:1]:
+		for selector in rows:
 			#a[1]/@href
 			url = selector.xpath("./a[1]/@href").extract()[0]
 			#print(url)
